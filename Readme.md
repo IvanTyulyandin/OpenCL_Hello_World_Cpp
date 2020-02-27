@@ -10,4 +10,9 @@ I did not found any example of such replacement, that is why I publish code.
 
 If you wish to build using Clang in release mode and in a separate folder, run
 ```compileClangRelease.sh``` and then ```runInBuildDir.sh```.
-     
+
+## Requirements
+1. Build tools and CMake
+```bash $ sudo apt-get install build-essentials cmake```
+2. OpenCL
+```bash $ sudo apt-get install ocl-icd-opencl-dev opencl-headers
