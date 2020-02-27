@@ -6,6 +6,11 @@
 int main() {
     std::vector<cl::Platform> platforms;
     cl::Platform::get(&platforms);
+	
+	if (platforms.empty()) {
+		std::cerr << "No OCL platforms found!" << std::endl;
+		return 2;
+	}
 
     auto platform = platforms[0];
 
