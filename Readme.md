@@ -20,7 +20,8 @@ $ sudo apt-get install build-essentials cmake
 ```bash 
 $ sudo apt-get install ocl-icd-opencl-dev opencl-headers
 ```
-3. Package that enables runnig openCL on most modern Intel CPUs
+3. Package that enables running OpenCL on most modern Intel CPUs
 ```bash 
 sudo apt install beignet
 ```
+Alternatively, you can download OpenCL runtime from Intel site and install it manually.
