@@ -109,9 +109,11 @@ int main() {
             << "\" is \"" << platform.getInfo<CL_PLATFORM_VERSION>() << "\"\n";
 
     std::vector<cl::Device> devices;
-    err = platform.getDevices(CL_DEVICE_TYPE_CPU, &devices);
+    err = platform.getDevices(CL_DEVICE_TYPE_DEFAULT, &devices);
     check_errors(err, "get devices");
-
+    for (const auto& device: devices) {
+        std::cout << device.getInfo<CL_DEVICE_NAME>() << '\n';
+    }
 
     auto ctx = cl::Context(devices, NULL, NULL, NULL, &err);
     check_errors(err, "context creation");
